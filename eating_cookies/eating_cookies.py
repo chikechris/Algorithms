@@ -7,18 +7,19 @@ import sys
 # recursive solution
 
 
-def eating_cookies(n, cache={}):
-    if n in cache:
-        return cache[n]
-    if n == 0:  # base case
-        value = 1
-    elif n > 0:
-        print('number of cookies: ', n)
-        value = eating_cookies(n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
-    elif n < 0:
-        value = 0
-        cache[n] = value
-        return value
+def eating_cookies(num_cookies, cache={}):
+  if num_cookies in cache:
+    return cache[num_cookies]
+  if num_cookies == 0:  # base case
+    value = 1
+  elif num_cookies > 0:
+    print('num of cookies: ', num_cookies)
+    value = eating_cookies(
+        num_cookies - 1) + eating_cookies(num_cookies-2) + eating_cookies(num_cookies-3)
+  elif num_cookies < 0:
+    value = 0
+  cache[num_cookies] = value
+  return value
 
 
 if __name__ == "__main__":
