@@ -10,7 +10,7 @@ def recipe_batches(recipe, ingredients):
   try:
     for item in  recipe:
       if(ingredients[item]):
-        quantity = int(ingredients[item]/ recipe[item])
+        quantity = int(ingredients[item]/ recipe[item]) 
         batches.append(quantity)
       maxBatches = min(batches)
     return maxBatches

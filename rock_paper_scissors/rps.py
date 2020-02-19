@@ -2,8 +2,30 @@
 
 import sys
 
-def rock_paper_scissors(n):
-  pass 
+def rock_paper_scissors(roundsRemaining):
+ 
+  moves =["rock", "paper", "scissors"] 
+
+  outcomes =[]
+
+
+
+  def helperfun(roundsRemaining,  result=[]):
+    #  base case
+      if roundsRemaining == 0: # ---> there are no more plays 
+          return outcomes.append(result)
+    
+
+      for move in moves:
+      
+        # print("move", move)
+        helperfun(roundsRemaining - 1, result + [move])
+        # print("recursive call in for:", helperfun)
+
+  helperfun(roundsRemaining)
+  
+  # print(outcomes)
+  return outcomes
 
 
 if __name__ == "__main__":
