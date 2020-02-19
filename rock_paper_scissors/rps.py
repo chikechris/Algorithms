@@ -12,7 +12,7 @@ def rock_paper_scissors(roundsRemaining):
 
   def helperfun(roundsRemaining,  result=[]):
     #  base case
-      if roundsRemaining == 0: # ---> there are no more plays 
+      if roundsRemaining == 0: # ---> indicates no more plays 
           return outcomes.append(result)
     
 
