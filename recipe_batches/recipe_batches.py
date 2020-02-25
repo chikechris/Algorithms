@@ -2,9 +2,21 @@
 
 import math
 
-def recipe_batches(recipe, ingredients):
-  pass 
 
+
+def recipe_batches(recipe, ingredients):
+  batches =  []
+  quantity = None
+  try:
+    for item in  recipe:
+      if(ingredients[item]):
+        quantity = int(ingredients[item]/ recipe[item]) 
+        batches.append(quantity)
+      maxBatches = min(batches)
+    return maxBatches
+  except:
+    maxBatches = 0
+    return maxBatches
 
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
